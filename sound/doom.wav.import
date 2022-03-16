@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/doom.wav-4b8db285b6f52a6b580850f243f46f76.sample"
+
+[deps]
+
+source_file="res://sound/doom.wav"
+dest_files=[ "res://.import/doom.wav-4b8db285b6f52a6b580850f243f46f76.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

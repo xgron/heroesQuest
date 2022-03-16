@@ -1,0 +1,62 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://player/leftWalk2.png" type="Texture" id=1]
+[ext_resource path="res://player/rightIdle.png" type="Texture" id=2]
+[ext_resource path="res://player/rightWalk2.png" type="Texture" id=3]
+[ext_resource path="res://player/upWalk1.png" type="Texture" id=4]
+[ext_resource path="res://player/downWalk2.png" type="Texture" id=5]
+[ext_resource path="res://player/rightWalk1.png" type="Texture" id=6]
+[ext_resource path="res://player/downWalk1.png" type="Texture" id=7]
+[ext_resource path="res://player/leftWalk1.png" type="Texture" id=8]
+[ext_resource path="res://player/downIdle.png" type="Texture" id=9]
+[ext_resource path="res://player/upWalk2.png" type="Texture" id=10]
+[ext_resource path="res://player/leftIdle.png" type="Texture" id=11]
+[ext_resource path="res://player/upIdle.png" type="Texture" id=12]
+[ext_resource path="res://player/Player.gd" type="Script" id=13]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 11 ), ExtResource( 8 ), ExtResource( 11 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "left",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 6 ), ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "right",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 4 ), ExtResource( 12 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "up",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 7 ), ExtResource( 9 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "down",
+"speed": 10.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 4.0
+height = 2.0
+
+[node name="Player" type="KinematicBody2D"]
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_group_": true,
+"_editor_description_": ""
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "right"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 1, 4 )
+rotation = -1.5708
+shape = SubResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
