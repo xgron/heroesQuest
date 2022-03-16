@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/fanfare.wav-f4cd37d4f99edb12de24ec5df2276b17.sample"
+
+[deps]
+
+source_file="res://sound/fanfare.wav"
+dest_files=[ "res://.import/fanfare.wav-f4cd37d4f99edb12de24ec5df2276b17.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
