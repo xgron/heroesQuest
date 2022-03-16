@@ -41,7 +41,7 @@ func move(delta, direction : Vector2, acceleration, max_speed, friction):
 func damage(var damage):
 	current_health = max(current_health - damage, 0)
 	if current_health == 0:
-		kill()
+		get_parent().kill()
 		
 func heal(var heal):
 	current_health = min(current_health + heal, max_health)
