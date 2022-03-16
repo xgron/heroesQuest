@@ -31,6 +31,11 @@ animations = [ {
 "name": "up",
 "speed": 10.0
 }, {
+"frames": [  ],
+"loop": true,
+"name": "New Anim",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 10 ), ExtResource( 2 ), ExtResource( 10 ), ExtResource( 9 ) ],
 "loop": true,
 "name": "down",
@@ -42,20 +47,17 @@ radius = 4.0
 height = 2.0
 
 [node name="Black_Knight" type="KinematicBody2D"]
-position = Vector2( 310, 192 )
 script = ExtResource( 8 )
 __meta__ = {
-"_edit_group_": true,
 "_editor_description_": ""
 }
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -1, -4 )
 frames = SubResource( 1 )
-animation = "right"
-frame = 1
+animation = "New Anim"
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 1, 4 )
 rotation = -1.5708
 shape = SubResource( 2 )

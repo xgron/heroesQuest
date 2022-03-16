@@ -5,7 +5,8 @@ const MAX_SPEED = 100
 const FRICTION = 800
 
 var velocity = Vector2.ZERO
-onready var _animated_sprite = $AnimatedSprite
+onready var _body = $body
+onready var _head = $head
 
 
 func _physics_process(delta):
@@ -22,20 +23,38 @@ func _physics_process(delta):
 
 
 	if Input.is_action_pressed("ui_right"):
-		_animated_sprite.play("right")
+		_body.play("right")
+		_head.play("right")
+		_head.stop()
+		_body.flip_h = false
+		_head.flip_h = false
 
 	elif Input.is_action_pressed("ui_left"):
-		_animated_sprite.play("left")
+		_body.play("left")
+		_head.play("left")		
+		_head.stop()		
+		_body.flip_h = true
+		_head.flip_h = true
 
 	elif Input.is_action_pressed("ui_up"):
-		_animated_sprite.play("up")
+		_body.play("up")
+		_head.play("up")
+		_head.stop()
 
 	elif Input.is_action_pressed("ui_down"):
-		_animated_sprite.play("down")
-
+		_body.play("down")
+		_head.play("down")
+		_head.stop()
+	
 	else:
-		_animated_sprite.stop()
-		_animated_sprite.frame = 0
-
+		_body.stop()
+		_body.frame = 0
+	
+	if Input.is_action_pressed("ui_accept"):
+		_head.play("down")
+		
+#	look_at(get_global_mouse_position())
 
 	velocity = move_and_slide(velocity)
+
+
