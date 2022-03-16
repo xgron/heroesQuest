@@ -19,26 +19,26 @@ func _physics_process(delta):
 
 
 	if Input.is_action_pressed("ui_right"):
-		_body.play("side")
-		_head.play("side")
+		_body.play("right")
+		_head.play("right")
 		_head.stop()
 		_body.flip_h = false
 		_head.flip_h = false
 
 	elif Input.is_action_pressed("ui_left"):
-		_body.play("side")
-		_head.play("side")		
+		_body.play("left")
+		_head.play("left")		
 		_head.stop()		
 		_body.flip_h = true
 		_head.flip_h = true
 
 	elif Input.is_action_pressed("ui_up"):
-		_body.play("forward")
+		_body.play("up")
 		_head.play("up")
 		_head.stop()
 
 	elif Input.is_action_pressed("ui_down"):
-		_body.play("forward")
+		_body.play("down")
 		_head.play("down")
 		_head.stop()
 	
@@ -54,5 +54,10 @@ func _physics_process(delta):
 #	look_at(get_global_mouse_position())
 
 	move(delta, input_vector, ACCELERATION, MAX_SPEED, FRICTION)
+	
+	
+	#for i in get_slide_count():
+	#	var collision = get_slide_collision(i)
+	#	collision.collider.damage(1)
 
 

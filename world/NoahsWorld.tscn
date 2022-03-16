@@ -1,12 +1,9 @@
 [gd_scene load_steps=7 format=2]
 
-<<<<<<< HEAD
-[ext_resource path="res://NPC/darkIsaac.tscn" type="PackedScene" id=1]
-=======
 [ext_resource path="res://NPC/Goblin/Goblin.tscn" type="PackedScene" id=1]
->>>>>>> 2f945935d5d74fe33f581f1623e7a5cf961d2006
 [ext_resource path="res://world/tree.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Entity/HealthBar.gd" type="Script" id=4]
+[ext_resource path="res://Entity/HealthBar.tscn" type="PackedScene" id=5]
 [ext_resource path="res://tiles/newTiles/new_tileset.tres" type="TileSet" id=13]
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=15]
 
@@ -38,17 +35,10 @@ z_index = 1
 position = Vector2( 177, 112 )
 z_index = 1
 
-<<<<<<< HEAD
-[node name="darkIsaac" parent="." instance=ExtResource( 1 )]
-position = Vector2( 110, 119 )
-z_index = 1
-=======
 [node name="Camera2D2" type="Camera2D" parent="Player"]
 current = true
 
-[node name="HealthBar" type="Node2D" parent="Player"]
-position = Vector2( -157, -87 )
-script = ExtResource( 4 )
+[node name="HealthBar" parent="Player" instance=ExtResource( 5 )]
 
 [node name="Goblin" parent="." instance=ExtResource( 1 )]
 position = Vector2( 90, 75 )
@@ -57,4 +47,3 @@ position = Vector2( 90, 75 )
 position = Vector2( -15, -18 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 4 )
->>>>>>> 2f945935d5d74fe33f581f1623e7a5cf961d2006
