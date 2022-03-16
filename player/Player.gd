@@ -51,5 +51,10 @@ func _physics_process(delta):
 #	look_at(get_global_mouse_position())
 
 	move(delta, input_vector, ACCELERATION, MAX_SPEED, FRICTION)
+	
+	
+	#for i in get_slide_count():
+	#	var collision = get_slide_collision(i)
+	#	collision.collider.damage(1)
 
 
