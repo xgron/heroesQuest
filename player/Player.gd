@@ -1,10 +1,9 @@
-extends KinematicBody2D
+extends Entity
 
-const ACCELERATION = 800
-const MAX_SPEED = 100
-const FRICTION = 800
+export var ACCELERATION = 1000
+export var MAX_SPEED = 100
+export var FRICTION = 800
 
-var velocity = Vector2.ZERO
 onready var _body = $body
 onready var _head = $head
 
@@ -16,10 +15,6 @@ func _physics_process(delta):
 	input_vector = input_vector.normalized()
 
 
-	if input_vector != Vector2.ZERO:
-		velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
-	else:
-		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
 
 
 	if Input.is_action_pressed("ui_right"):
@@ -55,6 +50,6 @@ func _physics_process(delta):
 		
 #	look_at(get_global_mouse_position())
 
-	velocity = move_and_slide(velocity)
+	move(delta, input_vector, ACCELERATION, MAX_SPEED, FRICTION)
 
 
