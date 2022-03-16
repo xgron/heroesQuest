@@ -8,6 +8,7 @@ var velocity = Vector2.ZERO
 onready var _body = $body
 onready var _head = $head
 
+var bath = false
 
 func _physics_process(delta):
 	var input_vector = Vector2.ZERO
@@ -51,7 +52,9 @@ func _physics_process(delta):
 		_body.frame = 0
 	
 	if Input.is_action_pressed("ui_accept"):
-		_head.play("down")
+			remove_child($head)
+
+		
 		
 #	look_at(get_global_mouse_position())
 
