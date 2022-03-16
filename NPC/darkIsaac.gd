@@ -1,10 +1,9 @@
-extends KinematicBody2D
+extends Entity
 
 const ACCELERATION = 800
 const MAX_SPEED = 40
 const FRICTION = 800
 
-var velocity = Vector2.ZERO
 
 onready var player = get_parent().get_node("Player")
 
@@ -15,7 +14,7 @@ onready var _head = $head
 func _physics_process(delta):
 	velocity = Vector2.ZERO
 	var dist = player.global_position - self.global_position
-	print(dist.normalized())
+
 	if self.global_position.distance_to(player.global_position) < 80:
 		velocity = (player.global_position - global_position).normalized()
 		_head.play("down")

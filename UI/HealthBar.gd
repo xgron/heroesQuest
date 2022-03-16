@@ -18,7 +18,7 @@ func reloadHearts():
 	target = get_parent()
 
 	for x in range(target.current_health):
-		var heart : Sprite = load("res://Entity/Heart.tscn").instance()
+		var heart : Sprite = load("res://UI/Heart.tscn").instance()
 		add_child(heart)
 		heart.position.x += x * 15
 		hearts += [heart]

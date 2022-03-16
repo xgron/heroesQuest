@@ -37,6 +37,7 @@ func _physics_process(delta):
 		_head.play("up")
 		_head.stop()
 
+
 	elif Input.is_action_pressed("ui_down"):
 		_body.play("down")
 		_head.play("down")
@@ -46,10 +47,10 @@ func _physics_process(delta):
 		_body.stop()
 		_body.frame = 0
 	
-	if Input.is_action_pressed("ui_accept"):
-			remove_child($head)
+	if Input.is_action_just_pressed("ui_accept"):
+		launchProjectile(input_vector, 400, "res://Entity/Arrow.tscn")
+	
 
-		
 		
 #	look_at(get_global_mouse_position())
 
