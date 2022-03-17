@@ -42,7 +42,7 @@ func launchProjectile(direction, speed, resName):
 	var projectile : Entity = load(resName).instance()
 	get_parent().add_child(projectile)
 	projectile.position = position + direction * 20
-	projectile.velocity = direction * speed	
+	projectile.velocity = direction * speed
 	projectile.rotate(acos(direction.x) if direction.y >= 0 else 2 * PI - acos(direction.x))
 
 

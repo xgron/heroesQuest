@@ -20,4 +20,6 @@ func _physics_process(delta):
 func _on_Area2D_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
 	if body is Entity:
 		body.damage(1)
-	kill()
+		damage(1)
+	else:
+		kill()

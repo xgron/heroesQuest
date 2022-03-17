@@ -5,7 +5,7 @@ const MAX_SPEED = 40
 const FRICTION = 800
 
 
-onready var player = get_parent().get_node("Player")
+onready var player = get_parent().get_parent().get_node("Player")
 
 onready var _body = $body
 onready var _head = $head
