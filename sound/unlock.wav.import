@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/unlock.wav-14bf9fbc8fa9051c3d0e1ae11659046d.sample"
+type="AudioStreamWAV"
+uid="uid://drerj47hhtg0k"
+path="res://.godot/imported/unlock.wav-14bf9fbc8fa9051c3d0e1ae11659046d.sample"
 
 [deps]
 
 source_file="res://sound/unlock.wav"
-dest_files=[ "res://.import/unlock.wav-14bf9fbc8fa9051c3d0e1ae11659046d.sample" ]
+dest_files=["res://.godot/imported/unlock.wav-14bf9fbc8fa9051c3d0e1ae11659046d.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

@@ -1,8 +1,8 @@
 extends Entity
 
-export var ACCELERATION = 1000
-export var MAX_SPEED = 40
-export var FRICTION = 800
+@export var ACCELERATION = 1000
+@export var MAX_SPEED = 40
+@export var FRICTION = 800
 
 
 func _physics_process(delta):

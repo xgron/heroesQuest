@@ -1,7 +1,7 @@
 extends Node
 
-export var scene : String
-export var destinationNode : String # Node2D prefarably
+@export var scene : String
+@export var destinationNode : String # Node2D prefarably
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -19,7 +19,7 @@ func _ready():
 func swap_level():
 	var world = get_tree().current_scene
 	var player = world.get_node("Player")
-	var level = load(scene).instance()
+	var level = load(scene).instantiate()
 	world.add_child(level)
 	if destinationNode != null or destinationNode != '':
 		world.get_node("Player").position = level.get_node(destinationNode).position

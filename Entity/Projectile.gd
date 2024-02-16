@@ -5,10 +5,10 @@ extends Entity
 # var a = 2
 # var b = "text"
 
-export var ACCELERATION = 1000
-export var MAX_SPEED = 40
-export var FRICTION = 800
-export var DAMAGE = 1
+@export var ACCELERATION = 1000
+@export var MAX_SPEED = 40
+@export var FRICTION = 800
+@export var DAMAGE = 1
 
 
 

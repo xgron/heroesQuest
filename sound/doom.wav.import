@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/doom.wav-4b8db285b6f52a6b580850f243f46f76.sample"
+type="AudioStreamWAV"
+uid="uid://tlc8rmp6cvtx"
+path="res://.godot/imported/doom.wav-4b8db285b6f52a6b580850f243f46f76.sample"
 
 [deps]
 
 source_file="res://sound/doom.wav"
-dest_files=[ "res://.import/doom.wav-4b8db285b6f52a6b580850f243f46f76.sample" ]
+dest_files=["res://.godot/imported/doom.wav-4b8db285b6f52a6b580850f243f46f76.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

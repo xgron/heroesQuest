@@ -15,10 +15,10 @@ func reloadHearts():
 	
 	hearts = []
 	
-	target = get_parent()
+	target = get_parent().get_parent()
 
 	for x in range(target.current_health):
-		var heart : Sprite = load("res://UI/Heart.tscn").instance()
+		var heart : Sprite2D = load("res://UI/Heart.tscn").instantiate()
 		add_child(heart)
 		heart.position.x += x * 15
 		hearts += [heart]
@@ -32,3 +32,6 @@ func _ready():
 func _process(delta):
 	reloadHearts()
 	
+func _on_ViewportResized():
+	# This function needs to be connected to the viewport's resize signal to adjust heart positions
+	reloadHearts()

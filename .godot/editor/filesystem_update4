@@ -1,0 +1,7 @@
+res://default_env.tres
+res://world/World.tscn
+res://NPC/darkIsaac.gd
+res://player/Player.gd
+res://Entity/Entity.gd
+res://Entity/Object.gd
+res://UI/HealthBar.gd

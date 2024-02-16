@@ -1,11 +1,9 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
 class_name Entity
 
-export var max_health : int = 6
+@export var max_health : int = 6
 var current_health : int
-
-var velocity = Vector2.ZERO
 
 # This is a super class for all Entity Scripts.
 # It contains character specific behaviours, such as kill() or turn(var direction) etc.
@@ -34,12 +32,14 @@ func move(delta, direction : Vector2, acceleration, max_speed, friction):
 	else:
 		velocity = velocity.move_toward(Vector2.ZERO, friction * delta)
 
-	velocity = move_and_slide(velocity)
+	set_velocity(velocity)
+	move_and_slide()
+	velocity = velocity
 
 
 func launchProjectile(direction, speed, resName):
 	direction = direction.normalized()
-	var projectile : Entity = load(resName).instance()
+	var projectile : Entity = load(resName).instantiate()
 	get_parent().add_child(projectile)
 	projectile.position = position + direction * 20
 	projectile.velocity = direction * speed
@@ -47,12 +47,12 @@ func launchProjectile(direction, speed, resName):
 
 
 
-func damage(var damage):
+func damage(damage):
 	current_health = max(current_health - damage, 0)
 	if current_health == 0:
 		kill()
 		
-func heal(var heal):
+func heal(heal):
 	current_health = min(current_health + heal, max_health)
 
 	

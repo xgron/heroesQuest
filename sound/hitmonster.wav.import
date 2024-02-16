@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/hitmonster.wav-a099ea6a4d4bf4e9c099c6d93b1b9572.sample"
+type="AudioStreamWAV"
+uid="uid://dlnrpwkosyi4q"
+path="res://.godot/imported/hitmonster.wav-a099ea6a4d4bf4e9c099c6d93b1b9572.sample"
 
 [deps]
 
 source_file="res://sound/hitmonster.wav"
-dest_files=[ "res://.import/hitmonster.wav-a099ea6a4d4bf4e9c099c6d93b1b9572.sample" ]
+dest_files=["res://.godot/imported/hitmonster.wav-a099ea6a4d4bf4e9c099c6d93b1b9572.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

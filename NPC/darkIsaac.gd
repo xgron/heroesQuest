@@ -5,10 +5,10 @@ const MAX_SPEED = 40
 const FRICTION = 800
 
 
-onready var player = get_parent().get_parent().get_node("Player")
+@onready var player = get_parent().get_node("Player")
 
-onready var _body = $body
-onready var _head = $head
+@onready var _body = $body
+@onready var _head = $head
 
 
 func _physics_process(delta):
@@ -54,5 +54,6 @@ func _physics_process(delta):
 	elif dist.normalized().y > 0.5:
 		_head.play("down")
 		
-	move_and_slide(velocity * MAX_SPEED)
+	set_velocity(velocity * MAX_SPEED)
+	move_and_slide()
 

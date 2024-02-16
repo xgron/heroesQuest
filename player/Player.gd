@@ -1,11 +1,11 @@
 extends Entity
 
-export var ACCELERATION = 1000
-export var MAX_SPEED = 100
-export var FRICTION = 800
+@export var ACCELERATION = 1000
+@export var MAX_SPEED = 100
+@export var FRICTION = 800
 
-onready var _body = $body
-onready var _head = $head
+@onready var _body = $body
+@onready var _head = $head
 
 var bath = false
 
