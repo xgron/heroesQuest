@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=2]
-
-[ext_resource path="res://objects/heart_full.png" type="Texture2D" id=1]
-
-[node name="Heart" type="Sprite2D"]
-position = Vector2( 9, 9 )
-texture = ExtResource( 1 )
